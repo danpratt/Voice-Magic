@@ -13,6 +13,8 @@
 		65031C7E1E30066C007BE6DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65031C7D1E30066C007BE6DD /* Assets.xcassets */; };
 		65031C811E30066C007BE6DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65031C7F1E30066C007BE6DD /* LaunchScreen.storyboard */; };
 		65A8ABE11E43BA3A00D55739 /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A8ABE01E43BA3A00D55739 /* PlaySoundsViewController.swift */; };
+		65A8ABE31E43CC6700D55739 /* PlaySoundsViewcontroller+Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A8ABE21E43CC6700D55739 /* PlaySoundsViewcontroller+Audio.swift */; };
+		65A8ABE71E43D67100D55739 /* SharedAlertsForViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A8ABE61E43D67100D55739 /* SharedAlertsForViewControllers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		65031C801E30066C007BE6DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65031C821E30066C007BE6DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65A8ABE01E43BA3A00D55739 /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
+		65A8ABE21E43CC6700D55739 /* PlaySoundsViewcontroller+Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlaySoundsViewcontroller+Audio.swift"; sourceTree = "<group>"; };
+		65A8ABE61E43D67100D55739 /* SharedAlertsForViewControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedAlertsForViewControllers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				65031C7F1E30066C007BE6DD /* LaunchScreen.storyboard */,
 				65031C821E30066C007BE6DD /* Info.plist */,
 				65A8ABE01E43BA3A00D55739 /* PlaySoundsViewController.swift */,
+				65A8ABE21E43CC6700D55739 /* PlaySoundsViewcontroller+Audio.swift */,
+				65A8ABE61E43D67100D55739 /* SharedAlertsForViewControllers.swift */,
 			);
 			path = "Voice Magic";
 			sourceTree = "<group>";
@@ -142,7 +148,9 @@
 			files = (
 				65031C791E30066C007BE6DD /* RecordSoundsViewController.swift in Sources */,
 				65A8ABE11E43BA3A00D55739 /* PlaySoundsViewController.swift in Sources */,
+				65A8ABE71E43D67100D55739 /* SharedAlertsForViewControllers.swift in Sources */,
 				65031C771E30066C007BE6DD /* AppDelegate.swift in Sources */,
+				65A8ABE31E43CC6700D55739 /* PlaySoundsViewcontroller+Audio.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -28,31 +28,30 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         super.viewWillAppear(animated)
         print("viewWillAppear called")
         stopRecordingButton.isEnabled = false
-        
-        // Record audio
-        let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
-        let recordingName = "recordedVoice.wav"
-        let pathArray = [dirPath, recordingName]
-        let filePath = URL(string: pathArray.joined(separator: "/"))
-        print(filePath ?? "No path found")
-        let session = AVAudioSession.sharedInstance()
-        do {
-            try session.setCategory(AVAudioSessionCategoryPlayAndRecord, with:AVAudioSessionCategoryOptions.defaultToSpeaker)
-            try audioRecorder = AVAudioRecorder(url: filePath!, settings: [:])
-            audioRecorder.delegate = self
-        } catch {
-            print("Something went wrong starting the recording")
-        }
-        
-        audioRecorder.isMeteringEnabled = true
-        audioRecorder.prepareToRecord()
-        audioRecorder.record()
     }
 
     @IBAction func recordAudio(_ sender: Any) {
         stopRecordingButton.isEnabled = true
         recordButton.isEnabled = false
         recordingLabel.text = "Recording in Progress"
+        
+        // Record audio
+        let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
+        let recordingName = "recordedVoice.wav"
+        let pathArray = [dirPath, recordingName]
+        let filePath = URL(string: pathArray.joined(separator: "/"))
+        let session = AVAudioSession.sharedInstance()
+        do {
+            try session.setCategory(AVAudioSessionCategoryPlayAndRecord, with:AVAudioSessionCategoryOptions.defaultToSpeaker)
+            try audioRecorder = AVAudioRecorder(url: filePath!, settings: [:])
+            audioRecorder.delegate = self
+        } catch {
+            showAlert(Alerts.RecordingDisabledTitle, message: Alerts.RecordingDisabledMessage)
+        }
+        
+        audioRecorder.isMeteringEnabled = true
+        audioRecorder.prepareToRecord()
+        audioRecorder.record()
     }
 
     @IBAction func stopRecordingAudioButton(_ sender: Any) {
@@ -64,7 +63,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         do {
             try audioSession.setActive(false)
         } catch {
-        print("Something went wrongs stopping the audio")
+        showAlert(Alerts.RecordingFailedTitle, message: Alerts.RecordingDisabledMessage)
         }
     }
     
@@ -72,7 +71,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         if flag {
             performSegue(withIdentifier: "stopRecordingSegue", sender: audioRecorder.url)
         } else {
-            print("recording was not successful")
+            showAlert(Alerts.AudioSessionError, message: String(describing: Error.self))
         }
     }
     
