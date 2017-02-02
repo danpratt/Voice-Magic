@@ -12,7 +12,7 @@ extension UIViewController {
     struct Alerts {
         static let DismissAlert = "Dismiss"
         static let RecordingDisabledTitle = "Recording Disabled"
-        static let RecordingDisabledMessage = "You've disabled this app from recording your microphone. Check Settings."
+        static let RecordingDisabledMessage = "You've disabled this app from recording your microphone. Change this in Settings -> Privacy -> Microphone"
         static let RecordingFailedTitle = "Recording Failed"
         static let RecordingFailedMessage = "Something went wrong with your recording."
         static let AudioRecorderError = "Audio Recorder Error"

@@ -27,6 +27,7 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
         }        
     }
     
+    // Normal call for most sounds
     func playSound(rate: Float? = nil, pitch: Float? = nil, echo: Bool = false, reverb: Bool = false) {
         
         // initialize audio engine components
@@ -99,6 +100,9 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
         audioPlayerNode.play()
     }
     
+    // Mark: Darth Vader
+    
+    
     func playSound(rate: Float? = nil, pitch: Float? = nil, echo: Bool = false, reverb: Bool = false, vader: Bool) {
         
         // initialize audio engine components
@@ -126,8 +130,8 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
         let reverbNode = AVAudioUnitReverb()
         if vader {
             // node for reverb
-            reverbNode.loadFactoryPreset(.plate)
-            reverbNode.wetDryMix = 20
+            reverbNode.loadFactoryPreset(.mediumHall)
+            reverbNode.wetDryMix = 16
             audioEngine.attach(reverbNode)
         } else {
             // node for reverb

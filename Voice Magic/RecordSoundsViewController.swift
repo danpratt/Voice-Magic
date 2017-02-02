@@ -31,9 +31,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
 
     @IBAction func recordAudio(_ sender: Any) {
-        stopRecordingButton.isEnabled = true
-        recordButton.isEnabled = false
-        recordingLabel.text = "Recording in Progress"
         
         // Record audio
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
@@ -41,17 +38,28 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         let pathArray = [dirPath, recordingName]
         let filePath = URL(string: pathArray.joined(separator: "/"))
         let session = AVAudioSession.sharedInstance()
-        do {
-            try session.setCategory(AVAudioSessionCategoryPlayAndRecord, with:AVAudioSessionCategoryOptions.defaultToSpeaker)
-            try audioRecorder = AVAudioRecorder(url: filePath!, settings: [:])
-            audioRecorder.delegate = self
-        } catch {
-            showAlert(Alerts.RecordingDisabledTitle, message: Alerts.RecordingDisabledMessage)
+        session.requestRecordPermission() { allowed in
+            DispatchQueue.main.async {
+                if allowed {
+                    do {
+                        try session.setCategory(AVAudioSessionCategoryPlayAndRecord, with:AVAudioSessionCategoryOptions.defaultToSpeaker)
+                        try self.audioRecorder = AVAudioRecorder(url: filePath!, settings: [:])
+                        self.stopRecordingButton.isEnabled = true
+                        self.recordButton.isEnabled = false
+                        self.recordingLabel.text = "Say something: Recording is in progress"
+                        self.audioRecorder.delegate = self
+                        self.audioRecorder.isMeteringEnabled = true
+                        self.audioRecorder.prepareToRecord()
+                        self.audioRecorder.record()
+                    } catch {
+                        self.showAlert(Alerts.AudioSessionError, message: String(describing: Error.self))
+                    }
+                } else {
+                    self.showAlert(Alerts.RecordingDisabledTitle, message: Alerts.RecordingDisabledMessage)
+                }
+            }
         }
         
-        audioRecorder.isMeteringEnabled = true
-        audioRecorder.prepareToRecord()
-        audioRecorder.record()
     }
 
     @IBAction func stopRecordingAudioButton(_ sender: Any) {
