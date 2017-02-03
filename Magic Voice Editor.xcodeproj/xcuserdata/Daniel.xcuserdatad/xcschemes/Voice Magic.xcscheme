@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "65031C721E30066C007BE6DD"
-               BuildableName = "Voice Magic.app"
-               BlueprintName = "Voice Magic"
-               ReferencedContainer = "container:Voice Magic.xcodeproj">
+               BuildableName = "Magic Voice Editor.app"
+               BlueprintName = "Magic Voice Editor"
+               ReferencedContainer = "container:Magic Voice Editor.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "65031C721E30066C007BE6DD"
-            BuildableName = "Voice Magic.app"
-            BlueprintName = "Voice Magic"
-            ReferencedContainer = "container:Voice Magic.xcodeproj">
+            BuildableName = "Magic Voice Editor.app"
+            BlueprintName = "Magic Voice Editor"
+            ReferencedContainer = "container:Magic Voice Editor.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "65031C721E30066C007BE6DD"
-            BuildableName = "Voice Magic.app"
-            BlueprintName = "Voice Magic"
-            ReferencedContainer = "container:Voice Magic.xcodeproj">
+            BuildableName = "Magic Voice Editor.app"
+            BlueprintName = "Magic Voice Editor"
+            ReferencedContainer = "container:Magic Voice Editor.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "65031C721E30066C007BE6DD"
-            BuildableName = "Voice Magic.app"
-            BlueprintName = "Voice Magic"
-            ReferencedContainer = "container:Voice Magic.xcodeproj">
+            BuildableName = "Magic Voice Editor.app"
+            BlueprintName = "Magic Voice Editor"
+            ReferencedContainer = "container:Magic Voice Editor.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

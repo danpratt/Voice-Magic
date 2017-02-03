@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		65031C731E30066C007BE6DD /* Voice Magic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Voice Magic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65031C731E30066C007BE6DD /* Magic Voice Editor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Magic Voice Editor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65031C761E30066C007BE6DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65031C781E30066C007BE6DD /* RecordSoundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordSoundsViewController.swift; sourceTree = "<group>"; };
 		65031C7B1E30066C007BE6DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		65031C741E30066C007BE6DD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				65031C731E30066C007BE6DD /* Voice Magic.app */,
+				65031C731E30066C007BE6DD /* Magic Voice Editor.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,9 +76,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		65031C721E30066C007BE6DD /* Voice Magic */ = {
+		65031C721E30066C007BE6DD /* Magic Voice Editor */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 65031C851E30066C007BE6DD /* Build configuration list for PBXNativeTarget "Voice Magic" */;
+			buildConfigurationList = 65031C851E30066C007BE6DD /* Build configuration list for PBXNativeTarget "Magic Voice Editor" */;
 			buildPhases = (
 				65031C6F1E30066C007BE6DD /* Sources */,
 				65031C701E30066C007BE6DD /* Frameworks */,
@@ -88,9 +88,9 @@
 			);
 			dependencies = (
 			);
-			name = "Voice Magic";
+			name = "Magic Voice Editor";
 			productName = "Voice Magic";
-			productReference = 65031C731E30066C007BE6DD /* Voice Magic.app */;
+			productReference = 65031C731E30066C007BE6DD /* Magic Voice Editor.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -110,7 +110,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 65031C6E1E30066C007BE6DD /* Build configuration list for PBXProject "Voice Magic" */;
+			buildConfigurationList = 65031C6E1E30066C007BE6DD /* Build configuration list for PBXProject "Magic Voice Editor" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -123,7 +123,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				65031C721E30066C007BE6DD /* Voice Magic */,
+				65031C721E30066C007BE6DD /* Magic Voice Editor */,
 			);
 		};
 /* End PBXProject section */
@@ -197,9 +197,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Dan Pratt (ZJ769HHQS2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dan Pratt (ZJ769HHQS2)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = ZJ769HHQS2;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -247,9 +249,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Dan Pratt (ZJ769HHQS2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dan Pratt (ZJ769HHQS2)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = ZJ769HHQS2;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -262,6 +266,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -273,10 +278,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = ZJ769HHQS2;
 				INFOPLIST_FILE = "Voice Magic/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.BlauMagier.Voice-Magic";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.BlauMagier.Magic-Voice-Editor";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -286,10 +294,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = ZJ769HHQS2;
 				INFOPLIST_FILE = "Voice Magic/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.BlauMagier.Voice-Magic";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.BlauMagier.Magic-Voice-Editor";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -298,7 +309,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		65031C6E1E30066C007BE6DD /* Build configuration list for PBXProject "Voice Magic" */ = {
+		65031C6E1E30066C007BE6DD /* Build configuration list for PBXProject "Magic Voice Editor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				65031C831E30066C007BE6DD /* Debug */,
@@ -307,7 +318,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		65031C851E30066C007BE6DD /* Build configuration list for PBXNativeTarget "Voice Magic" */ = {
+		65031C851E30066C007BE6DD /* Build configuration list for PBXNativeTarget "Magic Voice Editor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				65031C861E30066C007BE6DD /* Debug */,
