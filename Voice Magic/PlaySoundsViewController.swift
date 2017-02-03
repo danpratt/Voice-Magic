@@ -11,8 +11,7 @@ import AVFoundation
 
 class PlaySoundsViewController: UIViewController {
     
-    // MARK: Outlets for buttons
-    
+    @IBOutlet var playViewButtonsCollection: [UIButton]!
     @IBOutlet weak var slowButton: UIButton!
     @IBOutlet weak var fastButton: UIButton!
     @IBOutlet weak var highPitchButton: UIButton!
@@ -63,6 +62,11 @@ class PlaySoundsViewController: UIViewController {
         super.viewDidLoad()
         // Setup audio
         setupAudio()
+        
+        for button in playViewButtonsCollection {
+            button.imageView?.contentMode = .scaleAspectFit
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

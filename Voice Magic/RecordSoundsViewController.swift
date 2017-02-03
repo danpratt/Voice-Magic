@@ -21,16 +21,32 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("viewWillAppear called")
         stopRecordingButton.isEnabled = false
     }
 
     @IBAction func recordAudio(_ sender: Any) {
+        recordSession()
+     }
+
+    @IBAction func stopRecordingAudioButton(_ sender: Any) {
+        stopRecordingButton.isEnabled = false
+        recordButton.isEnabled = true
+        recordingLabel.text = "Tap to record"
+        audioRecorder.stop()
+        let audioSession = AVAudioSession.sharedInstance()
+        do {
+            try audioSession.setActive(false)
+        } catch {
+        showAlert(Alerts.RecordingFailedTitle, message: Alerts.RecordingDisabledMessage)
+        }
+    }
+    
+    func recordSession() {
         
         // Record audio
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
@@ -58,20 +74,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
                     self.showAlert(Alerts.RecordingDisabledTitle, message: Alerts.RecordingDisabledMessage)
                 }
             }
-        }
-        
-    }
-
-    @IBAction func stopRecordingAudioButton(_ sender: Any) {
-        stopRecordingButton.isEnabled = false
-        recordButton.isEnabled = true
-        recordingLabel.text = "Tap to record"
-        audioRecorder.stop()
-        let audioSession = AVAudioSession.sharedInstance()
-        do {
-            try audioSession.setActive(false)
-        } catch {
-        showAlert(Alerts.RecordingFailedTitle, message: Alerts.RecordingDisabledMessage)
         }
     }
     
