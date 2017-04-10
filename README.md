@@ -25,4 +25,4 @@ This app was written as my submission for the first project during my Udacity iO
 5. Submit a pull request :D
 
 ## License
-[MIT License](Tip-Calculator/LICENSE.txt)
+[MIT License](Voice%20Magic/LICENSE.md)
