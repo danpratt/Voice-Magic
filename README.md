@@ -9,18 +9,13 @@
 This is a simple voice manipulation app.  You record your voice, and then play it back through various filters.  Want to sound like the bad guy from the most popular Sci-Fi movie series?  Now you can!
 
 ## Purpose
-This app was written as my submission for the first project during my Udacity iOS Nanodegree course.  It was intended to learn how to use AutoLayout, passing information between view controllers, and how t
-a
+This app was written as my submission for the first project during my Udacity iOS Nanodegree course.  It was intended to learn how to use AutoLayout, passing information between view controllers, and acted as an introduction to AVFoundation.
+
 ## Feature Wish List
 
-This app was written while I was an even bigger newbie than I am now.  The entire code should probably be mostly re-written.  In addition there are several features I would like to eventually add to this app:
-
 - 3D Touch support for iOS version
-- Support for custom tip amount
-- Round option so you can round a tip to the nearest dollar amount.
-- Region support so that correct currency symbol shows up
-- Photograph / Social sharing option
-- Receipt storage
+- Sound file storing and sharing
+- Better editing controls
 
 ## Contributing
 1. Fork it!
