@@ -1,7 +1,7 @@
 # Magic Voice Editor
 
 [![Language](http://img.shields.io/badge/language-swift-brightgreen.svg?style=flat)](https://developer.apple.com/swift)
-[![License](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE.txt)
+[![License](https://img.shields.io/github/license/mashape/apistatus.svg)](Voice%20Magic/LICENSE.md)
 [![Build](https://img.shields.io/badge/Magic%20Voice%20Editor-v%200.9-blue.svg)](http://www.blaumagier.com)
 
 ## Description
