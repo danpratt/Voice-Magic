@@ -12,6 +12,8 @@
 		65031C7C1E30066C007BE6DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65031C7A1E30066C007BE6DD /* Main.storyboard */; };
 		65031C7E1E30066C007BE6DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65031C7D1E30066C007BE6DD /* Assets.xcassets */; };
 		65031C811E30066C007BE6DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65031C7F1E30066C007BE6DD /* LaunchScreen.storyboard */; };
+		65379C121FB6184D00261AAA /* RateIntAppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65379C111FB6184D00261AAA /* RateIntAppStore.swift */; };
+		65379C141FB6186600261AAA /* VMAppStoreReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65379C131FB6186600261AAA /* VMAppStoreReview.swift */; };
 		65A8ABE11E43BA3A00D55739 /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A8ABE01E43BA3A00D55739 /* PlaySoundsViewController.swift */; };
 		65A8ABE31E43CC6700D55739 /* PlaySoundsViewcontroller+Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A8ABE21E43CC6700D55739 /* PlaySoundsViewcontroller+Audio.swift */; };
 		65A8ABE71E43D67100D55739 /* SharedAlertsForViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A8ABE61E43D67100D55739 /* SharedAlertsForViewControllers.swift */; };
@@ -25,6 +27,8 @@
 		65031C7D1E30066C007BE6DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65031C801E30066C007BE6DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65031C821E30066C007BE6DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65379C111FB6184D00261AAA /* RateIntAppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateIntAppStore.swift; sourceTree = "<group>"; };
+		65379C131FB6186600261AAA /* VMAppStoreReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMAppStoreReview.swift; sourceTree = "<group>"; };
 		65A8ABE01E43BA3A00D55739 /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
 		65A8ABE21E43CC6700D55739 /* PlaySoundsViewcontroller+Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlaySoundsViewcontroller+Audio.swift"; sourceTree = "<group>"; };
 		65A8ABE61E43D67100D55739 /* SharedAlertsForViewControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedAlertsForViewControllers.swift; sourceTree = "<group>"; };
@@ -60,17 +64,43 @@
 		65031C751E30066C007BE6DD /* Voice Magic */ = {
 			isa = PBXGroup;
 			children = (
+				65379C101FB6180E00261AAA /* StoreKit */,
+				65379C0F1FB6180500261AAA /* Controllers */,
+				65379C0E1FB617FA00261AAA /* Views */,
 				65031C761E30066C007BE6DD /* AppDelegate.swift */,
-				65031C781E30066C007BE6DD /* RecordSoundsViewController.swift */,
-				65031C7A1E30066C007BE6DD /* Main.storyboard */,
 				65031C7D1E30066C007BE6DD /* Assets.xcassets */,
-				65031C7F1E30066C007BE6DD /* LaunchScreen.storyboard */,
 				65031C821E30066C007BE6DD /* Info.plist */,
+			);
+			path = "Voice Magic";
+			sourceTree = "<group>";
+		};
+		65379C0E1FB617FA00261AAA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				65031C7A1E30066C007BE6DD /* Main.storyboard */,
+				65031C7F1E30066C007BE6DD /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		65379C0F1FB6180500261AAA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				65031C781E30066C007BE6DD /* RecordSoundsViewController.swift */,
 				65A8ABE01E43BA3A00D55739 /* PlaySoundsViewController.swift */,
 				65A8ABE21E43CC6700D55739 /* PlaySoundsViewcontroller+Audio.swift */,
 				65A8ABE61E43D67100D55739 /* SharedAlertsForViewControllers.swift */,
 			);
-			path = "Voice Magic";
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		65379C101FB6180E00261AAA /* StoreKit */ = {
+			isa = PBXGroup;
+			children = (
+				65379C111FB6184D00261AAA /* RateIntAppStore.swift */,
+				65379C131FB6186600261AAA /* VMAppStoreReview.swift */,
+			);
+			path = StoreKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,7 +179,9 @@
 			files = (
 				65031C791E30066C007BE6DD /* RecordSoundsViewController.swift in Sources */,
 				65A8ABE11E43BA3A00D55739 /* PlaySoundsViewController.swift in Sources */,
+				65379C141FB6186600261AAA /* VMAppStoreReview.swift in Sources */,
 				65A8ABE71E43D67100D55739 /* SharedAlertsForViewControllers.swift in Sources */,
+				65379C121FB6184D00261AAA /* RateIntAppStore.swift in Sources */,
 				65031C771E30066C007BE6DD /* AppDelegate.swift in Sources */,
 				65A8ABE31E43CC6700D55739 /* PlaySoundsViewcontroller+Audio.swift in Sources */,
 			);
@@ -295,7 +327,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = ZJ769HHQS2;
 				INFOPLIST_FILE = "Voice Magic/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.BlauMagier.Magic-Voice-Editor";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -312,7 +344,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = ZJ769HHQS2;
 				INFOPLIST_FILE = "Voice Magic/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.BlauMagier.Magic-Voice-Editor";
 				PRODUCT_NAME = "$(TARGET_NAME)";
